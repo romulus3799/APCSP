@@ -1,0 +1,28 @@
+body {
+	background-color:#79acd2;
+	text-align:center;
+	font-family: "Arial Rounded MT";
+}
+h1 {
+	color: #335e92;
+	font-size: 48pt;
+}
+#divDisplay, label {
+    margin-top: 20px;
+	display: inline-block;
+	font-size: 36pt;
+	color: #15315c;
+}
+label {
+    font-size: 14pt;
+    color: red;
+}
+input {
+	font-size: 14pt;
+	color: #5b8bb8;
+	background-color: #daebf4;
+	border-color: #5b8bb8;
+	border-style: solid;
+	margin-top: 10px;
+    border-width: 1px;
+}

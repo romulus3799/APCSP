@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width">
+<head>
+<title>Hello World!</title>
+<style type="text/css">
+	body {
+		background-image: url("backgroundImage.jpg");
+		background-color: white;
+		text-align:center;
+	}
+	h1 {
+		font-family: "Corbel";
+		color: rgb(219,0,102);
+	}
+	form {
+		font-family: "Corbel";
+		color: rgb(36,64,79);
+		text-align:center;
+		font-weight:bold;
+		font-size: 16pt;
+	}
+	p {
+		font-family: "Corbel";
+		color: rgb(36,64,79);
+		text-align:center;
+		font-weight:bold;
+		font-size: 16pt;
+	}
+	.message {
+		color:blue
+		font-size:18pt
+	}
+	#NameBox {color:red}
+	input {
+		color: rgb(29,120,144);
+		font-family: "Corbel";
+		font-weight: bold;
+	}
+</style>
+<script>
+	var mash = 10;
+	document.getElementById('mashgame').value = "" + mash;
+	document.getElementById('mashgame').onkeypress=function(){
+		mash++;
+		document.getElementById('mashgame').value = "" + mash;
+		};
+	setInterval(function(){
+			if(mash > 0){
+				mash--;
+			}
+			document.getElementById('mashgame').value = "" + mash;
+		}, 500);
+	function checkPassword(){
+		if(document.getElementById('pw').value === 'itshighnoon'){
+			var audio = new Audio('highnoon.mp3');
+			audio.play();
+		}
+		else if(document.getElementById('pw').value === 'johncena'){
+			var audio = new Audio('johncena.mp3');
+			audio.play();
+		}
+		else if(document.getElementById('pw').value === 'wilhelm'){
+			var audio = new Audio('wilhelm.mp3');
+			audio.play();
+		}
+	}
+	function checkData(){
+		var personName = document.getElementById("txtName").value
+		if(personName == "Name" || personName == ""){
+			alert("Nice try. Get a real name, and THEN we'll talk.");
+			document.getElementById("txtName").value = "";
+			document.getElementById("txtName").focus();
+			document.getElementById("NameBox").innerHTML = "*required";
+			return false;
+		}
+		else{
+			sayHello(personName);
+		}
+	}
+	function sayHello(personName){
+		document.getElementById("textPlace").innerHTML = personName + " is the coolest!";
+		document.getElementById("cmdOK").style.color = "red";
+		document.getElementById("NameBox").innerHTML = "";
+		window.alert("There's been an awakening. Have you felt it?");
+	}
+	function refreshPage(){
+		location.reload();
+	}
+</script>
+</head>
+<body>
+	<h1>AP CSP</h1>
+	<h1>2016-2017</h1>
+	<hr width=82% />
+	<form id="frmInfo">
+		Enter your name. DO IT NOW:
+		<input type=text id="txtName" placeholder="Name" onClick="this.select();">
+		<span id=NameBox></span>
+		<hr size=36 />
+		Click "Display Message". DON'T ASK QUESTIONS.
+		<input type=button id="cmdOK" value="Display Message" onclick="checkData()">
+		<input type=button value="Begin Again" onclick="refreshPage()">
+	</form>
+	<br><br>
+	<p id="textPlace">AP Computer Science Principles</p>
+	<img id="pic" src="evilcorp.png" width=20%
+		onmousedown="var audio = new Audio('inception.mp3');audio.play();document.getElementById('pic').src = 'youdontsay.jpg';document.getElementById('hint').innerHTML = 'What have you done?';"
+		onmouseup="document.getElementById('pic').src = 'nic.png';document.getElementById('hint').innerHTML = 'Try clicking and holding the picture...';"
+		onmouseleave="document.getElementById('pic').src = 'evilcorp.png';document.getElementById('hint').innerHTML = 'Try mousing over the picture...';"
+		onmouseover="document.getElementById('pic').src = 'nic.png';document.getElementById('hint').innerHTML = 'Try clicking and holding the picture...';"/>
+	<p id="hint" >Try mousing over the picture...</p>
+	<input type=text id="pw" placeholder="What's the password?">
+	<input type=button value="Enter Password" onclick="checkPassword()">
+	<input type=text id='mashgame'></input>
+</body>
+</html>

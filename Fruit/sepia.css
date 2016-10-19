@@ -1,0 +1,28 @@
+body {
+	background-color:#e9d8a6;
+	text-align:center;
+	font-family: "Bell MT";
+}
+h1 {
+	color: #8E8273;
+	font-size: 48pt;
+}
+#divDisplay, label {
+    margin-top: 20px;
+	display: inline-block;
+	font-size: 36pt;
+	color: #62594E;
+}
+label {
+    font-size: 14pt;
+    color: red;
+}
+input {
+	font-size: 14pt;
+	color: gray;
+	background-color: #F7EFE6;
+	border-color: gray;
+	border-style: solid;
+	margin-top: 10px;
+    border-width: 1px;
+}

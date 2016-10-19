@@ -1,0 +1,28 @@
+body {
+	background-color:#1F1F1F;;
+	text-align:center;
+	font-family: "Consolas";
+}
+h1 {
+	color: #db0066;
+	font-size: 48pt;
+}
+#divDisplay, label {
+    margin-top: 20px;
+	display: inline-block;
+	font-size: 36pt;
+	color: #cffb4c;
+}
+label {
+    font-size: 14pt;
+    color: red;
+}
+input {
+	font-size: 14pt;
+	color: #0daade;
+	background-color: white;
+	border-color: #0daade;
+	border-style: solid;
+	margin-top: 10px;
+    border-width: 1px;
+}

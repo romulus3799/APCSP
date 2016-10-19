@@ -1,0 +1,30 @@
+body {
+	background-color:	#d5f9bf;
+	text-align:center;
+	font-family: "Bradley Hand ITC";
+    font-weight: bolder;
+}
+h1 {
+	color: #bec0df;
+	font-size: 48pt;
+    font-weight: 10;
+}
+#divDisplay, label {
+    margin-top: 20px;
+	display: inline-block;
+	font-size: 36pt;
+	color: #df8d8d;
+}
+label {
+    font-size: 14pt;
+    color: red;
+}
+input {
+	font-size: 14pt;
+	color: #cba0df;
+	background-color: #fdf99e;
+	border-color: #cdc95e;
+	border-style: solid;
+	margin-top: 10px;
+    border-width: 1px;
+}

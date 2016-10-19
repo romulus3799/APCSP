@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Fruit Store</title>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="bubbles.css">
+        <script type="text/javascript" src="fruitMain.js"></script>
+    </head>
+    <body id="bodyID">
+        <input type="button" class="button" value="Bland" onclick="swapStyleSheet('bland.css')">
+        <input type="button" class="button" value="Sepia" onclick="swapStyleSheet('sepia.css')">
+        <input type="button" class="button" value="Easter" onclick="swapStyleSheet('easter.css')">
+        <input type="button" class="button" value="Dark Vibrant" onclick="swapStyleSheet('darkVibrant.css')">
+        <input type="button" class="button" value="Bubbles" onclick="swapStyleSheet('bubbles.css')">
+        <h1>The Fruit Store</h1>
+        <input type="text" class="field" id="txtFruit" placeholder="Enter fruit name...">
+        <input type="text" class="field" id="txtPrice" placeholder="Enter fruit price...">
+        <input type="button" class="button" id="btnAdd" value="Add Fruit" onclick="addFruit()">
+        <label id="errorMessage"></label><br>
+        <input type="button" class="button" id="btnSort" value="Sort by Name" onclick="sortFruitNames()">
+		<input type="button" class="button" id="btnSort" value="Sort by Price" onclick="sortFruitPrices()"><br>
+        <div id="divDisplay"></div>
+    </body>
+</html>
